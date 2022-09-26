@@ -1,0 +1,14 @@
+.info-candidato-card {
+  border: 1px solid black;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+}
+
+.info-candidato-fundao {
+  border: 1px solid black;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
