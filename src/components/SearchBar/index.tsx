@@ -26,7 +26,8 @@ function SearchBar(props: SearchBarProps) {
       <button
         type="button"
         className="btn btn-primary"
-        onClick={() => props.setCandidatoProcurado(nomeBuscado)}>
+        onClick={() => props.setCandidatoProcurado(nomeBuscado)}
+      >
         Buscar candidato
       </button>
     </div>
