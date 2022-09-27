@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react'
-import InfoCandidato, { Candidato } from './components/InfoCandidato'
+import { MouseEvent, useState } from 'react'
 import './App.css'
-import api from './services/api'
+import Navbar from './components/Navbar'
+import PresidentePage from './components/PresidentePage'
+import SearchBar from './components/SearchBar'
 
 function App() {
-  const [candidatos, setCandidatos] = useState()
+  const [displayPage, setDisplayPage] = useState('')
+  const [candidatoProcurado, setCandidatoProcurado] = useState('')
 
-  useEffect(() => {
-    api
-      .get('/presidentes')
-      .then((response) => {
-        setCandidatos(response.data)
-      })
-      .catch((err) => {
-        console.error(`Não foi possível consultar a API :/\nErro: ${err}`)
-      })
-  }, [])
-
-  const candidatosSafe: Candidato[] = candidatos ? candidatos : []
+  const handleClick = (_event: MouseEvent, pageName: string) => {
+    if (displayPage !== pageName) {
+      setDisplayPage(pageName)
+    }
+  }
 
   return (
-    <div id="App" className="container py-5">
-      {candidatosSafe.map((candidato) => (
-        <InfoCandidato {...candidato} key={candidato.id} />
-      ))}
+    <div id="App">
+      <>
+        <Navbar onClick={handleClick} />
+        <div className="container py-3">
+          <SearchBar currentCandidate={displayPage} setCandidatoProcurado={setCandidatoProcurado} />
+          {displayPage === 'presidentes' && <PresidentePage nomeCandidato={candidatoProcurado} />}
+          {displayPage === 'governadores' && <div>Hello</div>}
+        </div>
+      </>
     </div>
   )
 }

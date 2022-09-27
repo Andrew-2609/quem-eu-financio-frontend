@@ -46,13 +46,13 @@ function InfoCandidato(candidato: Candidato) {
   return (
     <div className="row" ref={parent}>
       <div className="col-md-6">
-        <div className="info-candidato-card container my-5" onClick={reveal}>
+        <div className="info-candidato-card container my-3" onClick={reveal}>
           <CardCandidato {...candidato} />
         </div>
       </div>
       <div className="col-md-6">
         {show && (
-          <div className="info-candidato-fundao container my-5">
+          <div className="info-candidato-fundao container my-3">
             <FundaoCandidato {...fundaoSafe} />
           </div>
         )}
