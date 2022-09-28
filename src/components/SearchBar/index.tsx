@@ -2,11 +2,10 @@ import { useState } from 'react'
 import './index.css'
 
 type SearchBarProps = {
-  currentCandidate: string
   setCandidatoProcurado: (nomeCandidato: string) => void
 }
 
-function SearchBar(props: SearchBarProps) {
+function SearchBar({ setCandidatoProcurado }: SearchBarProps) {
   const [nomeBuscado, setNomeBuscado] = useState('')
 
   return (
@@ -19,14 +18,14 @@ function SearchBar(props: SearchBarProps) {
         aria-label="Search"
         onInput={(event) => setNomeBuscado((event.target as HTMLInputElement).value)}
         onKeyDown={({ key }) => {
-          if (key === 'Enter') props.setCandidatoProcurado(nomeBuscado)
+          if (key === 'Enter') setCandidatoProcurado(nomeBuscado)
         }}
       />
 
       <button
         type="button"
         className="btn btn-primary"
-        onClick={() => props.setCandidatoProcurado(nomeBuscado)}>
+        onClick={() => setCandidatoProcurado(nomeBuscado)}>
         Buscar candidato
       </button>
     </div>
