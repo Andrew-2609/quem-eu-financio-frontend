@@ -1,6 +1,7 @@
 import { MouseEvent, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
+import DeputadoEstadualPage from './components/Pages/DeputadoEstadualPage'
 import DeputadoFederalPage from './components/Pages/DeputadoFederalPage'
 import GovernadorPage from './components/Pages/GovernadorPage'
 import PresidentePage from './components/Pages/PresidentePage'
@@ -47,6 +48,9 @@ function App() {
           )}
           {displayPage === 'deputados-federais' && (
             <DeputadoFederalPage nomeCandidato={candidatoProcurado} estado={estado} />
+          )}
+          {displayPage === 'deputados-estaduais' && (
+            <DeputadoEstadualPage nomeCandidato={candidatoProcurado} estado={estado} />
           )}
         </div>
       </>
