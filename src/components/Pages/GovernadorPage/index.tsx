@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import api from '../../services/api'
-import InfoCandidato, { InfoCandidatoProps } from '../InfoCandidato'
+import api from '../../../services/api'
+import InfoCandidato, { InfoCandidatoProps } from '../../InfoCandidato'
 
 type GovernadorPageProps = {
   nomeCandidato: string
@@ -25,7 +25,7 @@ function GovernadorPage({ nomeCandidato, estado }: GovernadorPageProps) {
       .then((response) => {
         setCandidatos(response.data)
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         console.error(`Não foi possível consultar a API :/\nErro: ${err}`)
       })
   }, [urlBusca, estado])

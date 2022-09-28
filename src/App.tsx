@@ -1,8 +1,8 @@
 import { MouseEvent, useState } from 'react'
 import './App.css'
-import GovernadorPage from './components/GovernadorPage'
 import Navbar from './components/Navbar'
-import PresidentePage from './components/PresidentePage'
+import GovernadorPage from './components/Pages/GovernadorPage'
+import PresidentePage from './components/Pages/PresidentePage'
 import SearchBar from './components/SearchBar'
 
 function App() {
