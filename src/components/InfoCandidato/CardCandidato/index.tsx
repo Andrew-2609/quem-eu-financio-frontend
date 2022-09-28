@@ -1,6 +1,6 @@
-import { Candidato } from '..'
+import { InfoCandidatoProps } from '..'
 
-function CardCandidato(candidato: Candidato) {
+function CardCandidato(candidato: InfoCandidatoProps) {
   return (
     <div>
       <h1 className="info-candidato-titulo">{candidato.nomeUrna}</h1>

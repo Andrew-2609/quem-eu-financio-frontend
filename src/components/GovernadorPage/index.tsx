@@ -2,15 +2,18 @@ import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import InfoCandidato, { InfoCandidatoProps } from '../InfoCandidato'
 
-type PresidentePageProps = {
+type GovernadorPageProps = {
   nomeCandidato: string
+  estado: string
 }
 
-function PresidentePage({ nomeCandidato }: PresidentePageProps) {
+function GovernadorPage({ nomeCandidato, estado }: GovernadorPageProps) {
   const [candidatos, setCandidatos] = useState()
-  const [urlBusca, setUrlBusca] = useState('/presidentes')
+  const [urlBusca, setUrlBusca] = useState(`/governadores/${estado}`)
 
-  const valorAtual = nomeCandidato ? `/presidentes/${nomeCandidato}` : '/presidentes'
+  const valorAtual = nomeCandidato
+    ? `/governadores/${estado}/${nomeCandidato}`
+    : `/governadores/${estado}`
 
   if (urlBusca !== valorAtual) {
     setUrlBusca(valorAtual)
@@ -25,11 +28,14 @@ function PresidentePage({ nomeCandidato }: PresidentePageProps) {
       .catch((err) => {
         console.error(`Não foi possível consultar a API :/\nErro: ${err}`)
       })
-  }, [urlBusca])
+  }, [urlBusca, estado])
 
   const candidatosSafe: InfoCandidatoProps[] = candidatos ? candidatos : []
 
-  candidatosSafe.forEach((candidato) => (candidato.tipoCandidato = 'presidentes'))
+  candidatosSafe.forEach((candidato) => {
+    candidato.tipoCandidato = 'governadores'
+    candidato.estado = estado
+  })
 
   return (
     <>
@@ -40,4 +46,4 @@ function PresidentePage({ nomeCandidato }: PresidentePageProps) {
   )
 }
 
-export default PresidentePage
+export default GovernadorPage
