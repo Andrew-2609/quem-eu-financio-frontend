@@ -9,7 +9,7 @@ function PaginaInicial() {
       <section className="my-4" id="secao-apresentacao">
         <p>
           Esse projeto é fruto da minha insatisfação pessoal com a política brasileira,
-          especialmente no que diz respeito ao mal uso dos cofres públicos.
+          especialmente no que diz respeito ao mal uso dos recursos públicos.
         </p>
 
         <p>
