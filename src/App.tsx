@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from 'react'
 import './App.css'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import DeputadoEstadualPage from './components/Pages/DeputadoEstadualPage'
 import DeputadoFederalPage from './components/Pages/DeputadoFederalPage'
@@ -62,6 +63,7 @@ function App() {
             <DeputadoEstadualPage nomeCandidato={candidatoProcurado} estado={estado} />
           )}
         </div>
+        <Footer />
       </>
     </div>
   )
