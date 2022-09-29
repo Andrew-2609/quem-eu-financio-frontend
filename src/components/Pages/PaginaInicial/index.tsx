@@ -3,7 +3,7 @@ function PaginaInicial() {
   return (
     <div className="container mt-4">
       <header>
-        <h3>Olá, meu nome é Andrew, e seja-bem vindo ao "Quem eu Financio?"</h3>
+        <h3>Olá, meu nome é Andrew, e seja-bem vindo(a) ao "Quem eu Financio?"</h3>
       </header>
 
       <section className="my-4" id="secao-apresentacao">
