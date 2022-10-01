@@ -1,5 +1,6 @@
 import { MouseEvent } from 'react'
 import ButtonWithStateModal from './ButtonWithStateModal'
+import './index.css'
 
 type NavbarProps = {
   buscarPaginaInicial: (event: MouseEvent) => void
@@ -27,12 +28,17 @@ function Navbar({
   return (
     <nav
       id="navbar"
-      className="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-center py-3">
-      <button onClick={(event) => buscarPaginaInicial(event)}>Página Inicial</button>
-      <button onClick={(event) => buscarPresidentes(event, 'presidentes')}>Presidentes</button>
+      className="navbar navbar-expand-lg navbar-dark d-flex justify-content-center py-3">
+      <button className="navbar-btns" onClick={(event) => buscarPaginaInicial(event)}>
+        Página Inicial
+      </button>
+      <button className="navbar-btns" onClick={(event) => buscarPresidentes(event, 'presidentes')}>
+        Presidentes
+      </button>
       {tipoCandidatos.map((tipoCandidato, index) => (
         <ButtonWithStateModal
           key={index}
+          className="navbar-btns"
           tipoCandidato={tipoCandidato.tipo}
           id={`btn-${tipoCandidato.tipo}`}
           buscarCandidatosPorEstado={(event, pageName, estado) =>

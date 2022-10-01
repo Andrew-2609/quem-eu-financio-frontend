@@ -1,0 +1,13 @@
+@font-face {
+  font-family: Dumont;
+  src: url('../public/fonts/Dumont.ttf');
+}
+
+#conteudo-principal {
+  font-family: 'Dumont';
+}
+
+#corpo {
+  min-height: 100vh;
+  justify-content: space-between;
+}

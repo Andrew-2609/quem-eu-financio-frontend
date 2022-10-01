@@ -1,13 +1,24 @@
 .info-candidato-card {
-  border: 1px solid black;
-  height: 12rem;
+  border: 3px solid #ffdf00;
+  outline: 3px solid #009c3b;
+  border-radius: 10px;
+  height: 14rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: .125s all ease;
+}
+
+.info-candidato-card:hover {
+  transform: scale(.98);
+  transition: .125s all ease;
 }
 
 .info-candidato-fundao {
-  border: 1px solid black;
-  height: 12rem;
+  border: 3px solid white;
+  outline: 3px solid #009c3b;
+  border-radius: 10px;
+  height: 14rem;
   display: flex;
   align-items: center;
   justify-content: center;

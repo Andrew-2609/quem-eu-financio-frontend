@@ -2,6 +2,7 @@ import { MouseEvent } from 'react'
 import StateModal from './StateModal'
 
 type ButtonWithStateModalProps = {
+  className: string
   id: string
   children: string
   tipoCandidato: string
@@ -9,6 +10,7 @@ type ButtonWithStateModalProps = {
 }
 
 function ButtonWithStateModal({
+  className,
   id,
   tipoCandidato,
   children,
@@ -16,7 +18,7 @@ function ButtonWithStateModal({
 }: ButtonWithStateModalProps) {
   return (
     <>
-      <button type="button" data-bs-toggle="modal" data-bs-target={`#${id}`}>
+      <button className={className} type="button" data-bs-toggle="modal" data-bs-target={`#${id}`}>
         {children}
       </button>
 

@@ -3,7 +3,7 @@ import { InfoCandidatoProps } from '..'
 function CardCandidato(candidato: InfoCandidatoProps) {
   return (
     <div>
-      <h1 className="info-candidato-titulo">{candidato.nomeUrna}</h1>
+      <h3 className="info-candidato-titulo">{candidato.nomeUrna}</h3>
       <p className="info-candidato-atributo">Nome Completo: {candidato.nomeCompleto}</p>
       <p className="info-candidato-atributo">Número: {candidato.numero}</p>
       <p className="info-candidato-atributo">

@@ -1,6 +1,8 @@
+import './index.css'
+
 function Footer() {
   return (
-    <footer className="container text-center py-4">
+    <footer id="main-footer" className="container text-center py-4">
       <hr />
       <span id="footer-criado-por">
         Criado por:{' '}

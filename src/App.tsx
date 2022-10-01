@@ -44,26 +44,28 @@ function App() {
           buscarPresidentes={buscarPresidentes}
           buscarCandidatosPorEstado={buscarCandidatosPorEstado}
         />
-        <div className="container py-3">
-          {displayPage === 'pagina-inicial' && <PaginaInicial />}
-          {displayPage !== 'pagina-inicial' && (
-            <SearchBar setCandidatoProcurado={setCandidatoProcurado} />
-          )}
-          {displayPage === 'presidentes' && <PresidentePage nomeCandidato={candidatoProcurado} />}
-          {displayPage === 'governadores' && (
-            <GovernadorPage nomeCandidato={candidatoProcurado} estado={estado} />
-          )}
-          {displayPage === 'senadores' && (
-            <SenadorPage nomeCandidato={candidatoProcurado} estado={estado} />
-          )}
-          {displayPage === 'deputados-federais' && (
-            <DeputadoFederalPage nomeCandidato={candidatoProcurado} estado={estado} />
-          )}
-          {displayPage === 'deputados-estaduais' && (
-            <DeputadoEstadualPage nomeCandidato={candidatoProcurado} estado={estado} />
-          )}
-        </div>
-        <Footer />
+        <section id="conteudo-principal">
+          <div id="corpo" className="container py-3">
+            {displayPage === 'pagina-inicial' && <PaginaInicial />}
+            {displayPage !== 'pagina-inicial' && (
+              <SearchBar setCandidatoProcurado={setCandidatoProcurado} />
+            )}
+            {displayPage === 'presidentes' && <PresidentePage nomeCandidato={candidatoProcurado} />}
+            {displayPage === 'governadores' && (
+              <GovernadorPage nomeCandidato={candidatoProcurado} estado={estado} />
+            )}
+            {displayPage === 'senadores' && (
+              <SenadorPage nomeCandidato={candidatoProcurado} estado={estado} />
+            )}
+            {displayPage === 'deputados-federais' && (
+              <DeputadoFederalPage nomeCandidato={candidatoProcurado} estado={estado} />
+            )}
+            {displayPage === 'deputados-estaduais' && (
+              <DeputadoEstadualPage nomeCandidato={candidatoProcurado} estado={estado} />
+            )}
+          </div>
+          <Footer />
+        </section>
       </>
     </div>
   )
