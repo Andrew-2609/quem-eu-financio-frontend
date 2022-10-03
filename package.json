@@ -1,7 +1,16 @@
 {
   "name": "quem-eu-financio-frontend",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Front end of the project 'Quem Eu Financio?' made by Andrew Monteiro, to know better how much electoral fund each candidate took in the 2022 Brazilian general election.",
+  "author": "Andrew Monteiro <andrew.agoravai@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "quem eu financio",
+    "eleições 2022",
+    "brasil",
+    "brazil"
+  ],
+  "homepage": "./",
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.3",
     "@testing-library/jest-dom": "^5.16.5",
